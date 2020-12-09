@@ -12,6 +12,7 @@ module.exports = {
     //   on p.user_id = u.id
     // where u.id = 1;
     return db('users u')
-      .join('posts p', '', '')
+      .join('posts p', 'p.user_id', 'u.id')
+      .select('p.id', )
   }
 }
