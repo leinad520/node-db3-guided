@@ -34,7 +34,9 @@ router.get("/:id", (req, res) => {
 });
 
 // :5000/api/users/1/posts
-router.get('/:id/posts')
+router.get('/:id/posts', (req, res) => {
+  
+})
 
 router.post("/", (req, res) => {
   const userData = req.body;
