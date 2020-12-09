@@ -2,7 +2,7 @@ const db = require("../../data/db-config.js");
 
 // user-model
 module.exports = {
-  getUserPosts() {
+  getUserPosts(id) {
     // select
     //   p.id,
     //   u.username,
@@ -14,6 +14,6 @@ module.exports = {
     return db('users u')
       .join('posts p', 'p.user_id', 'u.id')
       .select('p.id', 'u.username', 'p.contents')
-      .where('u.id', id)
+      .where('u.id', id);
   }
 }
