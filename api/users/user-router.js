@@ -34,8 +34,8 @@ router.get("/:id", (req, res) => {
 });
 
 // :5000/api/users/1/posts
-router.get('/:id/posts', (req, res) => {
-  
+router.get('/:id/posts', async (req, res) => {
+  const posts = await User.getUserPosts()
 })
 
 router.post("/", (req, res) => {
