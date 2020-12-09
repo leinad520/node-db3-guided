@@ -1,5 +1,6 @@
 const express = require("express");
 
+// this should not be here!
 const db = require("../../data/db-config.js");
 
 const User = require('./user-model');
